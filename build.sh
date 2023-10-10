@@ -3,9 +3,13 @@
 cd "`dirname $0`"
 echo "Navigating to: $PWD"
 mkdir ../cyclonedds/build/
-cd ../cyclonedds/build/
 echo "Navigating to: $PWD"
-cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DBUILD_EXAMPLES=ON -DCMAKE_INSTALL_PREFIX=/Users/emir/dev/cyclonedds/install ..
+cd ../cyclonedds/build/
+echo "Erasing previous build content"
+rm -rf *
+echo "Erasing previous install content"
+rm -rf ../install
+cmake -G "Xcode" -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DBUILD_EXAMPLES=ON -DCMAKE_INSTALL_PREFIX=/Users/emir/dev/cyclonedds/install ..
 wait
 cmake --build . --parallel
 wait
