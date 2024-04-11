@@ -1,0 +1,1 @@
+cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=install -DCMAKE_PREFIX_PATH=/home/emir/dev/cyclonedds-certified/install -DCYCLONE_SOURCE_DIR=/home/emir/dev/cyclonedds-certified -DCMAKE_BUILD_TYPE=Debug
